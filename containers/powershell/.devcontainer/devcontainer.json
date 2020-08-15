@@ -1,6 +1,10 @@
 {
 	"name": "PowerShell",
-	"dockerFile": "Dockerfile",
+	"build": {
+		"dockerfile": "base.Dockerfile",
+			// Update VARIANT to pick a PowerShell version: 6, 7
+		"args": { "VARIANT": "6" }		
+	},
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 

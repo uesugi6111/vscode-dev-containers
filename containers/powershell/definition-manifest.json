@@ -1,0 +1,53 @@
+{
+	"variants": ["7", "6"],
+	"build": {
+		"latest": "true",
+		"rootDistro": "debian",
+		"tags": [
+			"donetcore:${VERSION}-${VARIANT}"
+		]
+	},
+	"dependencies": {
+		"image": "mcr.microsoft.com/dotnet/core/powershell:${VARIANT}-bionic",
+		"imageLink": "https://hub.docker.com/_/powershell",
+		"debian": [
+			"apt-utils", 
+			"dialog", 
+			"ca-certificates",
+			"git",
+			"iproute2",
+			"procps",
+			"curl",
+			"openssh-client",
+			"less",
+			"nano",
+			"gnupg",
+			"jq",
+			"wget",
+			"unzip",
+			"lsb-release",
+			"apt-transport-https",
+			"libc6",
+			"libgcc1",
+			"libgssapi-krb5-2",
+			"libicu[0-9][0-9]",
+			"libssl1.1",
+			"libstdc++6",
+			"zlib1g",
+			"sudo",
+			"zsh"
+		],
+		"manual": [
+			{
+				"Component": {
+					"Type": "git",
+					"git": {
+						"Name": "Oh My Zsh!",
+						"repositoryUrl": "https://github.com/robbyrussell/oh-my-zsh",
+						"commitHash": "c130aadb6a66aa680a322c08d87ad773316f713d"
+					}
+				}
+			}
+		]
+	}
+}
