@@ -9,32 +9,22 @@
 | *Contributors* | The VS Code Team |
 | *Definition type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/vscode/devcontainers/powershell |
-| *Available image variants* | 6, 7 |
 | *Published image architecture(s)* | x86-64 |
 | *Works in Codespaces* | Yes |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Languages, platforms* | PowerShell |
 
-
 ## Using this definition with an existing folder
 
-While this definition should work unmodified, you can select the version of PowerShell the container uses by updating the `VARIANT` arg in the included `devcontainer.json` (and rebuilding if you've already created the container).
-
-```json
-"args": { "VARIANT": "7" }
-```
-
-You can also directly reference pre-built versions of `.devcontainer/base.Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+While this definition should work unmodified, you can also directly reference pre-built versions of `.devcontainer/base.Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/vscode/devcontainers/powershell` (latest)
-- `mcr.microsoft.com/vscode/devcontainers/powershell:6`
-- `mcr.microsoft.com/vscode/devcontainers/powershell:7`
 
 Version specific tags tied to [releases in this repository](https://github.com/microsoft/vscode-dev-containers/releases) are also available.
 
-- `mcr.microsoft.com/vscode/devcontainers/powershell:0-6`
-- `mcr.microsoft.com/vscode/devcontainers/powershell:0.135-6`
-- `mcr.microsoft.com/vscode/devcontainers/powershell:0.135.0-6`
+- `mcr.microsoft.com/vscode/devcontainers/powershell:0`
+- `mcr.microsoft.com/vscode/devcontainers/powershell:0.135`
+- `mcr.microsoft.com/vscode/devcontainers/powershell:0.135.0`
 
 Alternatively, you can use the contents of `base.Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 

@@ -4,12 +4,12 @@
 		"latest": "true",
 		"rootDistro": "debian",
 		"tags": [
-			"donetcore:${VERSION}-${VARIANT}"
+			"powershell:${VERSION}-${VARIANT}"
 		]
 	},
 	"dependencies": {
 		"image": "mcr.microsoft.com/dotnet/core/powershell:${VARIANT}-bionic",
-		"imageLink": "https://hub.docker.com/_/powershell",
+		"imageLink": "https://hub.docker.com/_/microsoft-powershell",
 		"debian": [
 			"apt-utils", 
 			"dialog", 
